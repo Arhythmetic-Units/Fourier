@@ -48,7 +48,7 @@ and pull request guidance. For build or test failures, include the commit,
 exact command and working directory, tool versions, and relevant error output
 in the bug report.
 
-[fourier-manual]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/latest/download/Fourier.pdf
-[spectre-manual]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/latest/download/Spectre.pdf
-[issues]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/issues
-[new-issue]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/issues/new/choose
+[fourier-manual]: https://github.com/Arhythmetic-Units/Fourier/releases/latest/download/Fourier.pdf
+[spectre-manual]: https://github.com/Arhythmetic-Units/Fourier/releases/latest/download/Spectre.pdf
+[issues]: https://github.com/Arhythmetic-Units/Fourier/issues
+[new-issue]: https://github.com/Arhythmetic-Units/Fourier/issues/new/choose

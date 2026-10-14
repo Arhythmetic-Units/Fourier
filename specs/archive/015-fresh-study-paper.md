@@ -90,7 +90,7 @@ activity-regime effect from a causal barrier-cost claim. Residual OS activity,
 FTZ-tail accuracy, one-host/date replication and absent device evidence remain
 visible in methods, results and discussion.
 
-See [the review response](https://github.com/Kautenja/ArhythmeticUnits-Fourier/blob/a7650346cfb81d9bb454d4d470a45b5dd5c39d77/docs/whitepaper/reviews/revision-4-response.md)
+See [the review response](https://github.com/Arhythmetic-Units/Fourier/blob/a7650346cfb81d9bb454d4d470a45b5dd5c39d77/docs/whitepaper/reviews/revision-4-response.md)
 for addressed concerns and concrete remaining experiments. No performance
 collection, production DSP change, public upload or submission was performed.
 

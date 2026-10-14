@@ -54,7 +54,7 @@ under this archive; maintained collection tools remain in
 
 The previously removed bulk generated exports and review files are not restored
 by this refactor. Their historical snapshot remains in
-[Git at the completed rewrite](https://github.com/Kautenja/ArhythmeticUnits-Fourier/tree/a7650346cfb81d9bb454d4d470a45b5dd5c39d77/docs/whitepaper).
+[Git at the completed rewrite](https://github.com/Arhythmetic-Units/Fourier/tree/a7650346cfb81d9bb454d4d470a45b5dd5c39d77/docs/whitepaper).
 The spec 012 manifest still records those exports' original hashes; the current
 archive check validates retained evidence separately. Local ignored campaign
 bundles move with their evidence directory and remain local, not a public data

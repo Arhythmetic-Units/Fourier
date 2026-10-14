@@ -920,7 +920,7 @@ completion diary or mark preparation COMPLETE merely because planning passed.
 [modules]: ../../benchmark/paper/modules.hpp
 [process-table]: ../../docs/latex/deprecated/whitepaper/data/comparison-012/tables/primary/process-timings.csv
 [host-snapshot]: ../../docs/latex/deprecated/whitepaper/data/comparison-012/host/pre-confirm-01.json
-[reviews]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/blob/a7650346cfb81d9bb454d4d470a45b5dd5c39d77/docs/whitepaper/reviews/2026-09-30-Opus-5-5-M/meta-review.md
+[reviews]: https://github.com/Arhythmetic-Units/Fourier/blob/a7650346cfb81d9bb454d4d470a45b5dd5c39d77/docs/whitepaper/reviews/2026-09-30-Opus-5-5-M/meta-review.md
 [reliability-chat]: codex://threads/01a0f32a-4bf7-7fd0-bfc2-c641595e07d8
 
 ### Phase 4 Implementation: September 30, 2026

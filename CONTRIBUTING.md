@@ -27,7 +27,7 @@ tests. If you plan to submit a pull request, fork the repository first and
 substitute your fork's URL in the clone command:
 
 ```shell
-git clone https://github.com/Kautenja/ArhythmeticUnits-Fourier.git Fourier
+git clone https://github.com/Arhythmetic-Units/Fourier.git Fourier
 cd Fourier
 git switch -c my-first-contribution
 make test
@@ -115,7 +115,7 @@ From your projects directory, clone the repository. To submit a pull
 request, fork it on GitHub first and substitute your fork's clone URL:
 
 ```shell
-git clone https://github.com/Kautenja/ArhythmeticUnits-Fourier.git Fourier
+git clone https://github.com/Arhythmetic-Units/Fourier.git Fourier
 cd Fourier
 test -f dep/Catch2/catch_amalgamated.hpp
 test -f dep/Catch2/catch_amalgamated.cpp
@@ -1387,7 +1387,7 @@ Use these permanent links when preparing a release:
     shows the distributed plugin. The library's
     [source revision](https://github.com/VCVRack/library/tree/v2/repos/ArhythmeticUnits-Fourier)
     records the commit selected by its maintainers.
--   [GitHub releases](https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases)
+-   [GitHub releases](https://github.com/Arhythmetic-Units/Fourier/releases)
     host the manuals used by `plugin.json`.
 -   [VCV's update instructions](https://github.com/VCVRack/library#pushing-an-update)
     require a new manifest version and an exact commit hash. Maintainers
@@ -1458,7 +1458,7 @@ For an explicitly authorized release, work from the repository root:
     release_commit="$(git rev-parse "refs/tags/$release_tag^{commit}")" &&
     release_version="$(git show "$release_commit:plugin.json" | jq -er '.version')" &&
     test "$release_tag" = "v$release_version" &&
-    printf 'Updated to %s\n\nCommit: https://github.com/Kautenja/ArhythmeticUnits-Fourier/commit/%s\nRelease: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/tag/%s\n' \
+    printf 'Updated to %s\n\nCommit: https://github.com/Arhythmetic-Units/Fourier/commit/%s\nRelease: https://github.com/Arhythmetic-Units/Fourier/releases/tag/%s\n' \
       "$release_version" "$release_commit" "$release_tag" \
       > /tmp/fourier-vcv-library-update.md
     ```
@@ -1514,7 +1514,7 @@ Preserve file-level attribution and the source and artwork terms in
     checks, record sample rate, settings, and observations; include screenshots
     for visual changes. State any checks you could not run and why.
 
-[issues]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/issues
+[issues]: https://github.com/Arhythmetic-Units/Fourier/issues
 [testing]: #development-and-testing
 [architecture]: #architecture
 [cpp-style]: docs/style-guides/cpp.md

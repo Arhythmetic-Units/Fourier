@@ -10,7 +10,7 @@ abstract: >-
 authors:
   - family-names: Kauten
     given-names: Christian
-repository-code: "https://github.com/Kautenja/ArhythmeticUnits-Fourier"
+repository-code: "https://github.com/Arhythmetic-Units/Fourier"
 version: "2.2.1"
 date-released: "2026-10-01"
 license: GPL-3.0-or-later
@@ -35,5 +35,5 @@ preferred-citation:
   year: 2026
   month: 10
   version: "2.2.1"
-  url: "https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/download/v2.2.1/Fourier-whitepaper.pdf"
+  url: "https://github.com/Arhythmetic-Units/Fourier/releases/download/v2.2.1/Fourier-whitepaper.pdf"
   notes: "Release v2.2.1; Manuscript version 5; not yet deposited on arXiv"

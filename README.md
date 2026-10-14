@@ -183,7 +183,7 @@ latency model, prior work, and reproducible experiments. It names the approach
 instructions for the [LaTeX project](docs/whitepaper/fourier.tex) and its
 self-contained source export.
 
-Release [v2.2.1](https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/tag/v2.2.1)
+Release [v2.2.1](https://github.com/Arhythmetic-Units/Fourier/releases/tag/v2.2.1)
 includes both user manuals and the [whitepaper PDF][Whitepaper]. The
 [publication workflow](.github/workflows/manuals.yml) builds and validates
 all three documents from the release tag before attaching them. The
@@ -206,11 +206,11 @@ supplies the same report entry.
   month       = oct,
   type        = {Technical report},
   note        = {Release v2.2.1; Manuscript version 5; not yet deposited on arXiv},
-  url         = {https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/download/v2.2.1/Fourier-whitepaper.pdf},
+  url         = {https://github.com/Arhythmetic-Units/Fourier/releases/download/v2.2.1/Fourier-whitepaper.pdf},
 }
 ```
 
-The [code on GitHub](https://github.com/Kautenja/ArhythmeticUnits-Fourier) is
+The [code on GitHub](https://github.com/Arhythmetic-Units/Fourier) is
 the report's supporting software artifact; no separate software citation is
 needed. For reproducibility, link to the code and identify the software
 version or commit you used. The report's experiment metadata records its
@@ -264,16 +264,16 @@ Source code is licensed under **GPL-3.0-or-later**. Module artwork and
 Arhythmetic Units branding have separate **CC BY-NC-ND 4.0** terms.
 See [LICENSING.md](LICENSING.md) for details.
 
-[ReleaseBadge]: https://img.shields.io/github/v/release/Kautenja/ArhythmeticUnits-Fourier?label=GitHub%20release
-[LatestRelease]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/latest
-[TestsBadge]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/actions/workflows/dsp-tests.yml/badge.svg?branch=main
-[TestsWorkflow]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/actions/workflows/dsp-tests.yml?query=branch%3Amain
+[ReleaseBadge]: https://img.shields.io/github/v/release/Arhythmetic-Units/Fourier?label=GitHub%20release
+[LatestRelease]: https://github.com/Arhythmetic-Units/Fourier/releases/latest
+[TestsBadge]: https://github.com/Arhythmetic-Units/Fourier/actions/workflows/dsp-tests.yml/badge.svg?branch=main
+[TestsWorkflow]: https://github.com/Arhythmetic-Units/Fourier/actions/workflows/dsp-tests.yml?query=branch%3Amain
 [VCVBadge]: https://img.shields.io/badge/VCV-Rack%202-0099dd
 [VCVLibrary]: https://library.vcvrack.com/ArhythmeticUnits-Fourier
 [LicenseBadge]: https://img.shields.io/badge/source%20license-GPL--3.0--or--later-blue
-[Fourier]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/latest/download/Fourier.pdf
-[Spectre]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/latest/download/Spectre.pdf
-[Whitepaper]: https://github.com/Kautenja/ArhythmeticUnits-Fourier/releases/latest/download/Fourier-whitepaper.pdf
+[Fourier]: https://github.com/Arhythmetic-Units/Fourier/releases/latest/download/Fourier.pdf
+[Spectre]: https://github.com/Arhythmetic-Units/Fourier/releases/latest/download/Spectre.pdf
+[Whitepaper]: https://github.com/Arhythmetic-Units/Fourier/releases/latest/download/Fourier-whitepaper.pdf
 [report]: docs/whitepaper/README.md
 [citation-cff]: CITATION.cff
 [vcv-rack]: https://github.com/VCVRack/Rack
