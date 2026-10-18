@@ -9,6 +9,8 @@
 // Read the host declarations before rack.hpp applies its PRIVATE restriction.
 #include <engine/Engine.hpp>
 #include <history.hpp>
+#include <app/Scene.hpp>
+#include <window/Window.hpp>
 #undef PRIVATE
 
 #endif  // ARHYTHMETIC_UNITS_FOURIER_TEST_RACK_HOST_HPP_

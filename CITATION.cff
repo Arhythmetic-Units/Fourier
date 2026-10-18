@@ -11,8 +11,8 @@ authors:
   - family-names: Kauten
     given-names: Christian
 repository-code: "https://github.com/Arhythmetic-Units/Fourier"
-version: "2.2.1"
-date-released: "2026-10-01"
+version: "2.3.0"
+# Set date-released when v2.3.0 is published.
 license: GPL-3.0-or-later
 keywords:
   - digital signal processing
@@ -34,6 +34,6 @@ preferred-citation:
     name: Arhythmetic Units
   year: 2026
   month: 10
-  version: "2.2.1"
-  url: "https://github.com/Arhythmetic-Units/Fourier/releases/download/v2.2.1/Fourier-whitepaper.pdf"
-  notes: "Release v2.2.1; Manuscript version 5; not yet deposited on arXiv"
+  version: "2.3.0"
+  url: "https://github.com/Arhythmetic-Units/Fourier/releases/download/v2.3.0/Fourier-whitepaper.pdf"
+  notes: "Release v2.3.0; Manuscript version 5; not yet deposited on arXiv"

@@ -115,6 +115,17 @@ $(PANEL_INSPECT_BINARY): .build/test/rack/inspect_panels.cpp.o
 
 -include .build/test/rack/inspect_panels.cpp.d
 
+# Use Rack's actual single-pass screenshot exporter, including null modules.
+.PHONY: inspect-library-screenshots
+inspect-library-screenshots: .build/test/rack/inspect_library_screenshots$(RACK_TEST_SUFFIX)
+	DYLD_LIBRARY_PATH="$(abspath $(RACK_DIR))" LD_LIBRARY_PATH="$(abspath $(RACK_DIR))" $< "$(abspath $(RACK_DIR))" "$(CURDIR)" "$(abspath .build/test/rack/library)"
+
+.build/test/rack/inspect_library_screenshots$(RACK_TEST_SUFFIX): .build/test/rack/inspect_library_screenshots.cpp.o
+	$(CXX) $(filter-out -municode,$(CXXFLAGS)) -o $@ $< -L$(RACK_DIR) -lRack $(DISPLAY_GL_LIBS)
+
+.build/test/rack/inspect_library_screenshots.cpp.o: .build/rack-config
+-include .build/test/rack/inspect_library_screenshots.cpp.d
+
 # Optional research providers affect only the two paper executables.
 PAPER_VDSP ?= 0
 PAPER_FFTW_PREFIX ?=

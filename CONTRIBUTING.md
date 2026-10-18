@@ -682,6 +682,32 @@ comparison inputs, not shipped resources or build dependencies. Keep generated
 screenshots in the ignored build directory. Panel dimensions and Rack IDs must
 stay compatible with existing patches when changing the shared geometry.
 
+To check the images produced by Rack's module screenshot exporter, use the
+same graphical-desktop and Rack-resource prerequisites as `inspect-panels`:
+
+```shell
+make inspect-library-screenshots
+```
+
+This calls Rack's `Window::screenshotModules()` before drawing any live
+widgets, using fresh graphics contexts at 44.1, 48, 96, and 192 kHz. It checks
+all 17 text controls against the real modules' default parameter formatting,
+requires green glyph pixels in every exported value row, and checks that
+live controls still follow parameter changes. Inspect the resulting
+`.build/test/rack/library-{44100,48000,96000,192000}/ArhythmeticUnits-Fourier/`
+PNGs for clipping and legibility. The braces describe directory names, not
+a command argument. This is a native graphics check, not a headless DSP test
+or a complete interactive Rack session.
+
+[Rack's screenshot exporter](https://github.com/VCVRack/Rack/blob/v2/src/window/Window.cpp)
+creates module widgets with a null module, steps once, and renders the normal
+and light layers. Text controls therefore need explicit preview values;
+`TextKnob::onChange()` cannot obtain a parameter in this mode. Keep preview
+strings aligned with parameter defaults. The high-frequency preview uses
+the host's Nyquist frequency. Do not construct a DSP module just to supply
+preview text. Rack skips existing screenshot PNGs; this check removes only
+its two generated module images in each output directory before exporting.
+
 Run the headless Fourier spectrum-coordinate regressions:
 
 ```shell
@@ -1433,6 +1459,12 @@ For an explicitly authorized release, work from the repository root:
     in release notes or the owning spec. A successful headless suite does
     not verify interactive display behavior.
 
+    On a graphical desktop, also run `make inspect-library-screenshots` and
+    review both modules' fresh PNGs before submitting the release. Check
+    every control value, including `Flattop`, Fourier's `2048` and `30ms`,
+    frequency bounds, and units. A live-patch capture or manual cover image
+    does not test the null-module widgets used by Rack's screenshot export.
+
     VCV's [plugin toolchain](https://github.com/VCVRack/rack-plugin-toolchain)
     supports cross-platform build validation; standalone DSP CI alone does
     not validate the Rack plugin.
@@ -1463,6 +1495,11 @@ For an explicitly authorized release, work from the repository root:
       > /tmp/fourier-vcv-library-update.md
     ```
 
+    When the release fixes module previews, add a request to regenerate
+    both `SpectrumAnalyzer` and `Spectrogram` Library images. Rack's exporter
+    skips existing PNGs, so merely rerunning it against old outputs is not
+    sufficient. Include the locally verified screenshot results in the draft.
+
 6.  Review the draft and confirm the commit is publicly available. When the
     user has authorized notifying VCV, post it with an authenticated GitHub
     CLI session, or paste it into #826:
@@ -1476,6 +1513,12 @@ For an explicitly authorized release, work from the repository root:
     and build publication to the VCV maintainers. Report the comment URL
     as a submission receipt; verify the library listing/revision separately
     before claiming the release is available in Rack.
+    After publication, inspect the images on the
+    [Fourier module page](https://library.vcvrack.com/ArhythmeticUnits-Fourier/SpectrumAnalyzer)
+    and [Spectre module page](https://library.vcvrack.com/ArhythmeticUnits-Fourier/Spectrogram).
+    Confirm that every value is visible; a new version label alone does not
+    verify that the screenshots were refreshed. If they remain stale, request
+    regeneration in the same authorized VCV update thread.
 
 No automatic VCV notification is configured. If requested later, trigger it
 after successful stable-release validation and manual uploads, and deduplicate

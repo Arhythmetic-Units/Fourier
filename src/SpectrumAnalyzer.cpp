@@ -1114,51 +1114,62 @@ struct SpectrumAnalyzerWidget : ModuleWidget {
         display->setPosition(Fourier::PanelLayout::display_position());
         display->setSize(Fourier::PanelLayout::display_size(Fourier::PanelKind::FOURIER));
         addChild(display);
-        // Screen controls.
+        // Screen controls. Rack screenshots and browser previews have no module.
+        // Supply display defaults without constructing an engine/DSP instance.
         // Window function control with custom angles to match discrete range.
         auto window_function_param = createParam<TextKnob>(Vec(50 + 0 * 66, 330), module, SpectrumAnalyzer::PARAM_WINDOW_FUNCTION);
         window_function_param->maxAngle = 2.f * M_PI;
         window_function_param->label.text = "WINDOW";
+        if (!module) window_function_param->value.text = "Flattop";
         addParam(window_function_param);
         // Window length control with custom angles to match discrete range.
         auto window_length_param = createParam<TextKnob>(Vec(50 + 1 * 66, 330), module, SpectrumAnalyzer::PARAM_WINDOW_LENGTH);
         window_length_param->maxAngle = 1.2f * M_PI;
         window_length_param->label.text = "LENGTH";
+        if (!module) window_length_param->value.text = "2048";
         addParam(window_length_param);
         // Hop length control.
         auto hop_length_param = createParam<TextKnob>(Vec(50 + 2 * 66, 330), module, SpectrumAnalyzer::PARAM_HOP_LENGTH);
         hop_length_param->label.text = "HOP";
+        if (!module) hop_length_param->value.text = "30ms";
         addParam(hop_length_param);
         // Frequency scale control with custom angles to match discrete range.
         auto frequency_scale_param = createParam<TextKnob>(Vec(50 + 3 * 66, 330), module, SpectrumAnalyzer::PARAM_FREQUENCY_SCALE);
         frequency_scale_param->maxAngle = 0.3 * M_PI;
         frequency_scale_param->label.text = "FREQ SCALE";
         frequency_scale_param->label.font_size = 8.5f;
+        if (!module) frequency_scale_param->value.text = "Logarithmic";
         addParam(frequency_scale_param);
         // Magnitude scale control with custom angles to match discrete range.
         auto magnitude_scale_param = createParam<TextKnob>(Vec(50 + 4 * 66, 330), module, SpectrumAnalyzer::PARAM_MAGNITUDE_SCALE);
         magnitude_scale_param->maxAngle = 0.6 * M_PI;
         magnitude_scale_param->label.text = "Y SCALE";
+        if (!module) magnitude_scale_param->value.text = "Log 60dB";
         addParam(magnitude_scale_param);
         // Time smoothing control.
         auto time_smoothing_param = createParam<TextKnob>(Vec(50 + 5 * 66, 330), module, SpectrumAnalyzer::PARAM_TIME_SMOOTHING);
         time_smoothing_param->label.text = "AVERAGE";
+        if (!module) time_smoothing_param->value.text = "0ms";
         addParam(time_smoothing_param);
         // Frequency smoothing control with custom angles to match discrete range.
         auto frequency_smoothing_param = createParam<TextKnob>(Vec(50 + 6 * 66, 330), module, SpectrumAnalyzer::PARAM_FREQUENCY_SMOOTHING);
         frequency_smoothing_param->label.text = "SMOOTH";
         frequency_smoothing_param->maxAngle = 2.f * M_PI;
+        if (!module) frequency_smoothing_param->value.text = "None";
         addParam(frequency_smoothing_param);
         // Low and High frequency (frequency range) controls.
         auto low_freq_param = createParam<TextKnob>(Vec(50 + 7 * 66, 330), module, SpectrumAnalyzer::PARAM_LOW_FREQUENCY);
         low_freq_param->label.text = "LO FREQ";
+        if (!module) low_freq_param->value.text = "0Hz";
         addParam(low_freq_param);
         auto high_freq_param = createParam<TextKnob>(Vec(50 + 8 * 66, 330), module, SpectrumAnalyzer::PARAM_HIGH_FREQUENCY);
         high_freq_param->label.text = "HI FREQ";
+        if (!module) high_freq_param->value.text = string::f("%.5gHz", APP->engine->getSampleRate() / 2.f);
         addParam(high_freq_param);
         // Slope (dB/octave @1000Hz) controls.
         auto slope_param = createParam<TextKnob>(Vec(50 + 9 * 66, 330), module, SpectrumAnalyzer::PARAM_SLOPE);
         slope_param->label.text = "SLOPE";
+        if (!module) slope_param->value.text = "4.5dB/oct";
         addParam(slope_param);
         // Screws
         addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, 0)));
