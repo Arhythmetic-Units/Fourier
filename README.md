@@ -183,11 +183,12 @@ latency model, prior work, and reproducible experiments. It names the approach
 instructions for the [LaTeX project](docs/whitepaper/fourier.tex) and its
 self-contained source export.
 
-Release [v2.2.1](https://github.com/Arhythmetic-Units/Fourier/releases/tag/v2.2.1)
-includes both user manuals and the [whitepaper PDF][Whitepaper]. The
-[publication workflow](.github/workflows/manuals.yml) builds and validates
-all three documents from the release tag before attaching them. The
+The planned v2.3.0 release will include both user manuals and the
+[whitepaper PDF][Whitepaper]. The [publication workflow](.github/workflows/manuals.yml)
+builds and validates all three documents from the release tag before
+attaching them. The
 [report's build instructions][report] also support local PDF builds.
+Version-specific v2.3.0 citation URLs become available after publication.
 
 <details>
 <summary><strong>Citation Formats And Reproducibility</strong></summary>
@@ -205,8 +206,8 @@ supplies the same report entry.
   year        = {2026},
   month       = oct,
   type        = {Technical report},
-  note        = {Release v2.2.1; Manuscript version 5; not yet deposited on arXiv},
-  url         = {https://github.com/Arhythmetic-Units/Fourier/releases/download/v2.2.1/Fourier-whitepaper.pdf},
+  note        = {Release v2.3.0; Manuscript version 5; not yet deposited on arXiv},
+  url         = {https://github.com/Arhythmetic-Units/Fourier/releases/download/v2.3.0/Fourier-whitepaper.pdf},
 }
 ```
 
@@ -227,7 +228,7 @@ To reference a manual itself, use its dedicated BibTeX `@manual` entry:
 -   [Fourier manual citation](docs/manual-fourier/CITATION.bib)
 -   [Spectre manual citation](docs/manual-spectre/CITATION.bib)
 
-These entries identify the author, manual title, version 2.2.1, release month,
+These entries identify the author, manual title, version 2.3.0, release month,
 and version-specific PDF URL. Cite the version you consulted; update the
 metadata and URL if you use another release. Mathematical background and
 algorithm references are collected in the [technical report][report];

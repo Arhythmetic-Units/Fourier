@@ -1,6 +1,11 @@
 # Change Log
 
-## Unreleased
+## 2.3.0 (Unreleased)
+
+### Added
+
+-   Add a native Rack screenshot check for all text-control values and
+    rendered glyphs, plus release checks for refreshed VCV Library images.
 
 ### Fixed
 
