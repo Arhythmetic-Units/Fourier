@@ -1,5 +1,13 @@
 # Change Log
 
+## Unreleased
+
+### Fixed
+
+-   Show default text-control values in Fourier and Spectre module-browser
+    previews and Rack's module screenshot exports, including window, FFT
+    length, hop, scales, smoothing, frequency bounds, and slope.
+
 ## 2.2.1 (2026-10-01)
 
 ### Changed

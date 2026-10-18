@@ -1270,37 +1270,45 @@ struct SpectrogramWidget : ModuleWidget {
         // Buttons.
         addParam(createParamCentered<PB61303>(Fourier::PanelLayout::run(Fourier::PanelKind::SPECTRE), module, Spectrogram::PARAM_RUN));
         addChild(createLightCentered<PB61303Light<WhiteLight>>(Fourier::PanelLayout::run(Fourier::PanelKind::SPECTRE), module, Spectrogram::LIGHT_RUN));
-        // Screen controls.
+        // Screen controls. Rack screenshots and browser previews have no module.
+        // Supply display defaults without constructing an engine/DSP instance.
         // Window function control with custom angles to match discrete range.
         auto window_function_param = createParam<TextKnob>(Vec(80 + 0 * 61, 330), module, Spectrogram::PARAM_WINDOW_FUNCTION);
         window_function_param->label.text = "WINDOW";
         window_function_param->maxAngle = 2.f * M_PI;
+        if (!module) window_function_param->value.text = "Flattop";
         addParam(window_function_param);
         // Frequency scale control with custom angles to match discrete range.
         auto frequency_scale_param = createParam<TextKnob>(Vec(80 + 1 * 61, 330), module, Spectrogram::PARAM_FREQUENCY_SCALE);
         frequency_scale_param->maxAngle = 0.3 * M_PI;
         frequency_scale_param->label.text = "FREQ SCALE";
         frequency_scale_param->label.font_size = 8.5f;
+        if (!module) frequency_scale_param->value.text = "Logarithmic";
         addParam(frequency_scale_param);
         // Time smoothing control.
         auto time_smoothing_param = createParam<TextKnob>(Vec(80 + 2 * 61, 330), module, Spectrogram::PARAM_TIME_SMOOTHING);
         time_smoothing_param->label.text = "AVERAGE";
+        if (!module) time_smoothing_param->value.text = "0ms";
         addParam(time_smoothing_param);
         // Frequency smoothing control with custom angles to match discrete range.
         auto frequency_smoothing_param = createParam<TextKnob>(Vec(80 + 3 * 61, 330), module, Spectrogram::PARAM_FREQUENCY_SMOOTHING);
         frequency_smoothing_param->label.text = "SMOOTH";
         frequency_smoothing_param->maxAngle = 2.f * M_PI;
+        if (!module) frequency_smoothing_param->value.text = "None";
         addParam(frequency_smoothing_param);
         // Low and High frequency (frequency range) controls.
         auto low_freq_param = createParam<TextKnob>(Vec(80 + 4 * 61, 330), module, Spectrogram::PARAM_LOW_FREQUENCY);
         low_freq_param->label.text = "LO FREQ";
+        if (!module) low_freq_param->value.text = "0Hz";
         addParam(low_freq_param);
         auto high_freq_param = createParam<TextKnob>(Vec(80 + 5 * 61, 330), module, Spectrogram::PARAM_HIGH_FREQUENCY);
         high_freq_param->label.text = "HI FREQ";
+        if (!module) high_freq_param->value.text = string::f("%.5gHz", APP->engine->getSampleRate() / 2.f);
         addParam(high_freq_param);
         // Slope (dB/octave @1000Hz) controls.
         auto slope_param = createParam<TextKnob>(Vec(80 + 6 * 61, 330), module, Spectrogram::PARAM_SLOPE);
         slope_param->label.text = "SLOPE";
+        if (!module) slope_param->value.text = "4.5dB/oct";
         addParam(slope_param);
         // Screws
         addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, 0)));
