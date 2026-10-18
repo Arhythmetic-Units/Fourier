@@ -183,12 +183,11 @@ latency model, prior work, and reproducible experiments. It names the approach
 instructions for the [LaTeX project](docs/whitepaper/fourier.tex) and its
 self-contained source export.
 
-The planned v2.3.0 release will include both user manuals and the
-[whitepaper PDF][Whitepaper]. The [publication workflow](.github/workflows/manuals.yml)
-builds and validates all three documents from the release tag before
-attaching them. The
+Release [v2.3.0](https://github.com/Arhythmetic-Units/Fourier/releases/tag/v2.3.0)
+includes both user manuals and the [whitepaper PDF][Whitepaper]. The
+[publication workflow](.github/workflows/manuals.yml) builds and validates
+all three documents from the release tag before attaching them. The
 [report's build instructions][report] also support local PDF builds.
-Version-specific v2.3.0 citation URLs become available after publication.
 
 <details>
 <summary><strong>Citation Formats And Reproducibility</strong></summary>

@@ -1,7 +1,7 @@
 # Scheduling FFT-Based Spectral Analysis In The Audio Processing Loop
 
 A seven-page, two-column conference-style preprint by Christian Kauten
-(Arhythmetic Units), prepared for release v2.3.0 (manuscript version 5), dated
+(Arhythmetic Units), release v2.3.0 (manuscript version 5), dated
 October 1, 2026. It explains how to distribute FFT-based analysis across sample
 calls and evaluates the tradeoff between processing bursts, total work, and
 result age.

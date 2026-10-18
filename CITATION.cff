@@ -12,7 +12,7 @@ authors:
     given-names: Christian
 repository-code: "https://github.com/Arhythmetic-Units/Fourier"
 version: "2.3.0"
-# Set date-released when v2.3.0 is published.
+date-released: "2026-10-18"
 license: GPL-3.0-or-later
 keywords:
   - digital signal processing
